@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин футболок</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+
+<body>
+
+    <img class="gift" id="giftBtn" src="images/podarok.png" width="100" alt="">
+
+    <header>
+        <div class="header-wrapper">
+
+            <div class="header-content">
+                <h1>Яркие футболки для счастливой жизни!</h1>
+                <p>Красиво и качественно</p>
+                <a onclick="sayHello()" class="btn" href="#main">Читать дальше</a>
+            </div>
+        </div>
+        <div class="hero-image"></div>
+    </header>
+
+    <main id="main">
+        <div class="main-text">
+            <h2>ФУТБОЛКИ</h2>
+            <span> </span>
+        </div>
+
+        <div class="main-items">
+            <div class="main-item">
+                <img src="images/tshirt-1.jpg" width="270px" height="300px" alt=""> <br>
+                <span>Футболка</span> <br>
+                <span>499 pуб.</span> <br>
+                <button onclick="alert('Товар добавлен')">Добавить заказ</button>
+            </div>
+            <div class="main-item">
+                <img src="images/tshirt-2.jpg" width="270px" height="300px" alt=""> <br>
+                <span>Футболка</span> <br>
+                <span>499 pуб.</span> <br>
+                <button onclick="alert('Введите ваше имя')">Добавить заказ</button>
+            </div>
+            <div class="main-item">
+                <img src="images/tshirt-3.jpg" width="270px" height="300px" alt=""> <br>
+                <span>Футболка</span> <br>
+                <span>499 pуб.</span> <br>
+                <button>Добавить заказ</button>
+            </div>
+            <div class="main-item">
+                <img src="images/tshirt-1.jpg" width="270px" height="300px" alt=""> <br>
+                <span>Футболка</span> <br>
+                <span>499 pуб.</span> <br>
+                <button>Добавить заказ</button>
+            </div>
+            <div class="main-item">
+                <img src="images/tshirt-2.jpg" width="270px" height="300px" alt=""> <br>
+                <span>Футболка</span> <br>
+                <span>499 pуб.</span> <br>
+                <button>Добавить заказ</button>
+            </div>
+            <div class="main-item">
+                <img src="images/tshirt-3.jpg" width="270px" height="300px" alt=""> <br>
+                <span>Футболка</span> <br>
+                <span>499 pуб.</span> <br>
+                <button>Добавить заказ</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="wrapper order-form  wow animate__animated animate__fadeIn">
+        <h3>Оформление заказа</h3>
+        <div class="form-container">
+            <form action="/action_page">
+                <label for="fname"><strong>Имя</strong></label>
+                <input type="text" name="firstname" id="fname" placeholder="Имя">
+                <label for="lname"><strong>Фамилия</strong></label>
+                <input type="text" name="lastname" id="lname" placeholder="Фамилия">
+                <label for="email"><strong>Электронная почта</strong></label>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <label for="password"><strong>Телефон</strong></label>
+                <input type="tel" name="tel" id="tel" placeholder="Номер телефона">
+
+                <button type="submit">Перейти к оплате</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="giftModal" class="modal">
+
+        <!-- Содержимость модального окна -->
+        <div class="modal-content">
+            <!-- Кнопка для закрытия окна -->
+            <span class="close" id="giftClose">&times;</span>
+            <p>Вы получили подарок! Скидка 25%!</p>
+        </div>
+    </div>
+    <div class="rating">
+        <h2>Оцени наш сайт!</h2>
+
+        <img src="images/star_2.png" id="star-1" onmouseenter="star(1)" alt="" srcset="">
+        <img src="images/star_2.png" id="star-2" onmouseenter="star(2)" alt="" srcset="">
+        <img src="images/star_2.png" id="star-3" onmouseenter="star(3)" alt="" srcset="">
+        <img src="images/star_2.png" id="star-4" onmouseenter="star(4)" alt="" srcset="">
+        <img src="images/star_2.png" id="star-5" onmouseenter="star(5)" alt="" srcset="">
+
+        <p onclick="resetRating()" id="reset-rating">Сброс</p>
+
+        <button class="send-rating" id="sendRating">Отправить</button>
+
+        <p id="ratingText"><br></p>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+    <script src="site-rating.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>
